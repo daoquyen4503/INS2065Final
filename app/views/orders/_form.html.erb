@@ -12,12 +12,18 @@
 <% end %>
 
   <div class="mb-6">
+        <%= form.label :order_code, class: label_class %>
+          <%= form.text_field :order_code, class: input_class %>
+      </div>  
+  <div class="mb-6">
         <%= form.label :customer_id, class: label_class %>
-          <%= form.text_field :customer_id, class: input_class %>
+        <%= form.select :customer_id, options_from_collection_for_select( Customer.all, 'id', 'name', selected = order.customer_id), class: label_class %>
+
       </div>
   <div class="mb-6">
         <%= form.label :staff_id, class: label_class %>
-          <%= form.text_field :staff_id, class: input_class %>
+        <%= form.select :staff_id, options_from_collection_for_select( Staff.all, 'id', 'name', selected = order.staff_id), class: label_class %>
+
       </div>
   <div class="mb-6">
         <%= form.label :total_price, class: label_class %>
@@ -25,7 +31,7 @@
       </div>
   <div class="mb-6">
         <%= form.label :status, class: label_class %>
-          <%= form.text_field :status, class: input_class %>
+          <%= form.select :status, ['Pending', 'Completed', 'Canceled'], {}, class: 'form-control' %>
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>

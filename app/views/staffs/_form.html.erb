@@ -17,7 +17,7 @@
       </div>
   <div class="mb-6">
         <%= form.label :gender, class: label_class %>
-          <%= form.text_field :gender, class: input_class %>
+        <%= form.select :gender, ['Female', 'Male'], {}, class: 'form-control' %>
       </div>
   <div class="mb-6">
         <%= form.label :date_of_birth, class: label_class %>

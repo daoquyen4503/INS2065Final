@@ -14,12 +14,16 @@
 
   <ul class="text-slate-700">
       <li>
+        <p class="font-semibold">Order code:</p>
+        <p><%= @order.order_code %></p>
+      </li>
+      <li>
         <p class="font-semibold">Customer:</p>
-        <p><%= @order.customer %></p>
+        <p><%= @order.customer.name %></p>
       </li>
       <li>
         <p class="font-semibold">Staff:</p>
-        <p><%= @order.staff %></p>
+        <p><%= @order.staff.name %></p>
       </li>
       <li>
         <p class="font-semibold">Total price:</p>

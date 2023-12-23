@@ -13,11 +13,12 @@
 
   <div class="mb-6">
         <%= form.label :shipment_id, class: label_class %>
-          <%= form.text_field :shipment_id, class: input_class %>
+        <%= form.select :shipment_id, options_from_collection_for_select( Shipment.all, 'id', 'shipment_code', selected = shipment_detail.shipment_id), class: label_class %>
       </div>
   <div class="mb-6">
         <%= form.label :book_id, class: label_class %>
-          <%= form.text_field :book_id, class: input_class %>
+        <%= form.select :book_id, options_from_collection_for_select( Book.all, 'id', 'title', selected = shipment_detail.book_id), class: label_class %>
+
       </div>
   <div class="mb-6">
         <%= form.label :quantity, class: label_class %>

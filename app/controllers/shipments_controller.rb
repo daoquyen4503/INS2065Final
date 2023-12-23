@@ -65,6 +65,6 @@ class ShipmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shipment_params
-      params.require(:shipment).permit(:supplier_id, :received_at, :staff_id)
+      params.require(:shipment).permit(:shipment_code, :supplier_id, :received_at, :staff_id)
     end
 end

@@ -14,8 +14,12 @@
 
   <ul class="text-slate-700">
       <li>
+      <p class="font-semibold">Shipment code:</p>
+      <p><%= @shipment.shipment_code %></p>
+      </li>
+      <li>
         <p class="font-semibold">Supplier:</p>
-        <p><%= @shipment.supplier %></p>
+        <p><%= @shipment.supplier.name %></p>
       </li>
       <li>
         <p class="font-semibold">Received at:</p>
@@ -23,7 +27,7 @@
       </li>
       <li>
         <p class="font-semibold">Staff:</p>
-        <p><%= @shipment.staff %></p>
+        <p><%= @shipment.staff.name %></p>
       </li>
   </ul>
 </div>

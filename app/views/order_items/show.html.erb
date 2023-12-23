@@ -15,15 +15,19 @@
   <ul class="text-slate-700">
       <li>
         <p class="font-semibold">Book:</p>
-        <p><%= @order_item.book %></p>
+        <p><%= @order_item.book.title %></p>
       </li>
       <li>
         <p class="font-semibold">Order:</p>
-        <p><%= @order_item.order %></p>
+        <p><%= @order_item.order.order_code %></p>
       </li>
       <li>
         <p class="font-semibold">Quantity:</p>
         <p><%= @order_item.quantity %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Price:</p>
+        <p><%= @order_item.price %></p>
       </li>
   </ul>
 </div>
