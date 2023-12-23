@@ -1,11 +1,11 @@
 # README
 
-## GROUP <add-group-name>
+## GROUP 7
 
-- Member 1: <add-name>
-- Member 2: <add-name>
-- Member 3: <add-name>
-- Member 4: <add-name>
+- Member 1: Dao Thi Quyen
+- Member 2: Dang Anh Quoc
+- Member 3: Nguyen Van Hieu
+- Member 4: Dinh Tien Muoi
 
 ## Starting server
 
