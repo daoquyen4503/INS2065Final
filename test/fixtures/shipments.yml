@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier: one
+  received_at: 2023-12-23
+  staff: one
+
+two:
+  supplier: two
+  received_at: 2023-12-23
+  staff: two
