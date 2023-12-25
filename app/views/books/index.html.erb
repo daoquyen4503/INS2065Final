@@ -8,6 +8,12 @@
     <%= link_to new_book_path, class: button_class(theme: "primary") do %>
     Add New Book
     <% end %>
+    <%= form_tag(books_path, method: :get) do %>
+      <%= text_field_tag :search_title, params[:search_title], placeholder: "Search by Title" %>
+      <%= text_field_tag :search_author, params[:search_author], placeholder: "Search by Author" %>
+      <%= submit_tag "Search" %>
+    <% end %>    
+
   </div>
 
   <table class="table-auto border-collapse border-slate-400 w-full">

@@ -56,6 +56,23 @@ class BooksController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  #Search
+  
+def index
+  @books = Book.all
+
+  if params[:search_title].present?
+    @books = @books.where("title LIKE ?", "%#{params[:search_title]}%")
+  end
+
+  if params[:search_author].present?
+    @books = @books.where("author LIKE ?", "%#{params[:search_author]}%")
+  end
+end
+
+  
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
