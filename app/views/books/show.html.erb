@@ -12,6 +12,8 @@
     </div>
   </div>
 
+    <h1><%= @book.title %></h1>
+
   <ul class="text-slate-700">
       <li>
         <p class="font-semibold">Title:</p>
@@ -29,5 +31,10 @@
         <p class="font-semibold">Price:</p>
         <p><%= @book.price %></p>
       </li>
+      <% if @book.cover_image.attached? %>
+      <%= image_tag @book.cover_image %>
+    <% else %>
+      <p>No cover image attached.</p>
+    <% end %>
   </ul>
 </div>

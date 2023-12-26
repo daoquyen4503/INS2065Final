@@ -27,6 +27,11 @@
         <%= form.label :price, class: label_class %>
           <%= form.text_field :price, class: input_class %>
       </div>
+  <div>
+      <%= form.label :cover_image %>
+      <%= form.file_field :cover_image %>
+    </div>    
+
 
 <%= form.submit class: button_class(theme: 'primary') %>
 

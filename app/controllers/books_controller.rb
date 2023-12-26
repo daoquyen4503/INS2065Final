@@ -82,6 +82,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def book_params
-      params.require(:book).permit(:title, :author, :category_id, :price)
+      params.require(:book).permit(:title, :author, :category_id, :price, :cover_image)
     end
 end
