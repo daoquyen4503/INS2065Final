@@ -4,7 +4,6 @@ class Book < ApplicationRecord
   validates_presence_of :title, :author, :category, :price
   validates_uniqueness_of :title
   validates_numericality_of :price
-
   has_one_attached :cover_image
 end
   
